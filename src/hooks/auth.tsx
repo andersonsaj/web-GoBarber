@@ -36,8 +36,7 @@ export const AuthProvider: React.FC = ({ children }) => {
       email,
       password,
     });
-    const token = response.data;
-    const user = response.data.userSession;
+    const { token, user } = response.data;
 
     localStorage.setItem('@GoBarber:token', token);
     localStorage.setItem('@GoBarber:user', JSON.stringify(user));
