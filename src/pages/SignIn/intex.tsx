@@ -36,13 +36,12 @@ const SignIn: React.FC = () => {
         });
         await schema.validate(data, { abortEarly: false });
         await signIn({ email: data.email, password: data.password });
-        history.push('/dashbord');
-
         addToast({
           type: 'success',
           title: 'Sucesso',
           description: 'Autenticação realizada com sucesso',
         });
+        history.push('/dashbord');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
