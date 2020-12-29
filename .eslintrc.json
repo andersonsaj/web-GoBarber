@@ -29,6 +29,8 @@
     "@typescript-eslint/camelcase": "off",
     "camelcase": "off",
     "react/jsx-props-no-spreading": "off",
+    "import/no-duplicates": "off",
+    "import/no-unresolved": "off",
     "prettier/prettier": ["error",
       {
         "endOfLine": "auto"
