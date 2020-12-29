@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import Dashbord from '../pages/Dashbord';
-import ForgotPassword from '../pages/ForgotPassword/intex';
-import ResetPassword from '../pages/ResetPassword/intex';
-import SignIn from '../pages/SignIn/intex';
-import SignUp from '../pages/SignUp/intex';
+import Dashboard from '../pages/Dashboard';
+import ForgotPassword from '../pages/ForgotPassword';
+import Profile from '../pages/profile';
+import ResetPassword from '../pages/ResetPassword';
+import SignIn from '../pages/SignIn';
+import SignUp from '../pages/SignUp';
 import Route from './Route';
 
 const Routes: React.FC = () => (
@@ -14,7 +15,8 @@ const Routes: React.FC = () => (
     <Route path="/forgot-password" component={ForgotPassword} />
     <Route path="/reset-password" component={ResetPassword} />
 
-    <Route path="/dashbord" component={Dashbord} isPrivate />
+    <Route path="/dashboard" component={Dashboard} isPrivate />
+    <Route path="/profile" component={Profile} isPrivate />
   </Switch>
 );
 

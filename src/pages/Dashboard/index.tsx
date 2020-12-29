@@ -5,6 +5,7 @@ import 'react-day-picker/lib/style.css';
 import { FiClock, FiPower } from 'react-icons/fi';
 import { ptBR } from 'date-fns/esm/locale';
 import { parseISO } from 'date-fns/esm';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -36,7 +37,7 @@ interface Appointments {
   };
 }
 
-const Dashbord: React.FC = () => {
+const Dashboard: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentMonth, setcurrentMonth] = useState(new Date());
   const [monthAvailability, setMonthAvailability] = useState<
@@ -144,7 +145,9 @@ const Dashbord: React.FC = () => {
             <img src={user.avatar_url} alt={user.name} />
             <div>
               <span>Bem-vindo</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
           <button type="button" onClick={signOut}>
@@ -256,4 +259,4 @@ const Dashbord: React.FC = () => {
   );
 };
 
-export default Dashbord;
+export default Dashboard;
